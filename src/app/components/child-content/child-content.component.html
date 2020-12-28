@@ -1,0 +1,36 @@
+<div *ngFor="let element of step.Elements">
+  <div *ngIf="element.type == 'textbox'" class="form-group">
+    <label>{{ element.description }}</label>
+    <input
+      type="{{ element.type }}"
+      name="{{ element.key }}"
+      class="form-control"
+      id="{{ element.key }}"
+      ngModel
+    />
+  </div>
+
+  <div *ngIf="element.type == 'date'" class="form-group">
+    <label>{{ element.description }}</label>
+    <input
+      type="{{ element.type }}"
+      name="{{ element.key }}"
+      class="form-control"
+      id="{{ element.key }}"
+      ngModel
+    />
+  </div>
+  <div *ngIf="element.type == 'dropdown'" class="form-group">
+    <label>{{ element.description }}</label>
+    <select
+      name="{{ element.key }}"
+      class="form-control"
+      id="{{ element.key }}"
+      ngModel
+    >
+      <option *ngFor="let value of element.possibleValues">
+        {{ value }}
+      </option>
+    </select>
+  </div>
+</div>

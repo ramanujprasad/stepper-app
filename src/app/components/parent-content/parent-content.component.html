@@ -1,0 +1,27 @@
+<div class="arrow-steps clearfix">
+  <div class="row" *ngFor="let step of stepsArr">
+    <div class="eachStep" *ngFor="let s of step.steps; index as i">
+      <div style="margin: 20px">
+        <div class="step" [class.current]="i == currentStep">
+          <span> step {{ i + 1 }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let step of stepsArr">
+  <div *ngFor="let s of step.steps; index as i">
+    <div *ngIf="i == currentStep">
+      <app-childcontent [step]="s"> </app-childcontent>
+    </div>
+  </div>
+  <div class="buttonGroup">
+    <button (click)="back(i)" class="btn-primary alignButton">
+      Previous
+    </button>
+    <button (click)="next(i)" class="btn-primary alignButton ">
+      Next
+    </button>
+  </div>
+</div>
