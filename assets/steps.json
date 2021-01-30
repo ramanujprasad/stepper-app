@@ -1,0 +1,70 @@
+[
+  {
+    "steps": [
+      {
+        "id": "1",
+        "key": "PersonalBlock",
+        "description": "Personal Information",
+        "Elements": [
+          {
+            "id": "2",
+            "key": "name",
+            "description": " Name",
+            "type": "textbox"
+          },
+          {
+            "id": "3",
+            "key": "dob",
+            "description": "Date of Birth",
+            "type": "date"
+          }
+        ]
+      },
+      {
+        "id": "2",
+        "key": "ContactBlock",
+        "description": "Contact Information",
+        "Elements": [
+          {
+            "id": "4",
+            "key": "email",
+            "description": "Email Address",
+            "type": "textbox"
+          },
+          {
+            "id": "4",
+            "key": "phonenumber",
+            "description": "PhoneNumber",
+            "type": "textbox"
+          }
+        ]
+      },
+      {
+        "id": "3",
+        "key": "ProfessionalBlock",
+        "description": "Professional Information",
+        "Elements": [
+          {
+            "id": "5",
+            "key": "company",
+            "description": " Company",
+            "type": "textbox"
+          },
+          {
+            "id": "6",
+            "key": "position",
+            "description": "Position",
+            "type": "textbox"
+          },
+          {
+            "id": "7",
+            "key": "employmenttype",
+            "description": "Employeement Type",
+            "type": "dropdown",
+            "possibleValues": ["FullTime", "PartTime", "Contract"]
+          }
+        ]
+      }
+    ]
+  }
+]
